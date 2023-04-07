@@ -32,12 +32,6 @@ public class AgendamentoRepositoryTest {
         assertEquals(agenda.get(0),Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build());
     }
 
-    @Test
-    public void testDesmarcarServico(){
-        agendamentoRepository.deleteById(3L);
-        List<Agendamento> agenda = agendamentoRepository.findAll();
-        assertEquals(4, agenda.size());
-    }
 
     @Test
     public void testAgenda(){

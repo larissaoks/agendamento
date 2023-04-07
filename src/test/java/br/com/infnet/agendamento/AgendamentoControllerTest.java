@@ -67,6 +67,8 @@ public class AgendamentoControllerTest {
     public void testDesmarcarServico() throws  Exception{
         Agendamento ag1 = Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build();
         Agendamento ag2 = Agendamento.builder().id(2L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("Hidratação").build();
+        Agendamento ag3 = Agendamento.builder().id(3L).nomeCliente("Maria").cpf("63587566941").dataAgendamento("05/01/2023").servico("Luzes").build();
+        Agendamento ag4 = Agendamento.builder().id(4L).nomeCliente("Ana").cpf("65875411254").dataAgendamento("23/12/2022").servico("manicure").build();
         List<Agendamento> agendamento = Arrays.asList(ag1, ag2);
         Mockito.when(agendamentoService.getById(1L)).thenReturn(Optional.ofNullable(ag1));
 

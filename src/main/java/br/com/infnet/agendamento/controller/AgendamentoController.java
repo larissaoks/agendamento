@@ -55,4 +55,5 @@ public class AgendamentoController {
         }
         return ResponseEntity.status(200).body("Servico desmarcado!");
     }
+
 }
