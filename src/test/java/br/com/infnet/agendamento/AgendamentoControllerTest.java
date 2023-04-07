@@ -33,7 +33,7 @@ public class AgendamentoControllerTest {
     ObjectMapper objectMapper;
 
     @Test
-    public void testMarcarServico() throws Exception {
+    void testMarcarServico() throws Exception {
         mockMvc.perform(post("/marcarServico")
                 .content("application/json")
                 .param("nomeCliente", "Larissa")
@@ -46,7 +46,7 @@ public class AgendamentoControllerTest {
     }
 
     @Test
-    public void testBuscarAgendaPorCliente() throws Exception{
+    void testBuscarAgendaPorCliente() throws Exception{
         Agendamento ag1 = Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build();
         Agendamento ag2 = Agendamento.builder().id(2L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("Hidratação").build();
         Agendamento ag3 = Agendamento.builder().id(3L).nomeCliente("Maria").cpf("63587566941").dataAgendamento("05/01/2023").servico("Luzes").build();
@@ -64,7 +64,7 @@ public class AgendamentoControllerTest {
     }
 
     @Test
-    public void testDesmarcarServico() throws  Exception{
+    void testDesmarcarServico() throws  Exception{
         Agendamento ag1 = Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build();
         Agendamento ag2 = Agendamento.builder().id(2L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("Hidratação").build();
         Agendamento ag3 = Agendamento.builder().id(3L).nomeCliente("Maria").cpf("63587566941").dataAgendamento("05/01/2023").servico("Luzes").build();

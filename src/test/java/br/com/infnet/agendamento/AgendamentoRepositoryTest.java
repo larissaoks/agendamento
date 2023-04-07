@@ -18,7 +18,7 @@ public class AgendamentoRepositoryTest {
     AgendamentoRepository agendamentoRepository;
 
     @BeforeEach
-    public void agendaTest(){
+    void agendaTest(){
         agendamentoRepository.save(Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build());
         agendamentoRepository.save(Agendamento.builder().id(2L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("Hidratação").build());
         agendamentoRepository.save(Agendamento.builder().id(3L).nomeCliente("Maria").cpf("63587566941").dataAgendamento("05/01/2023").servico("Luzes").build());
@@ -27,14 +27,14 @@ public class AgendamentoRepositoryTest {
     }
 
     @Test
-    public void testFindAllByCpf(){
+    void testFindAllByCpf(){
         List<Agendamento> agenda = agendamentoRepository.findAllByCpf("16558100738");
         assertEquals(agenda.get(0),Agendamento.builder().id(1L).nomeCliente("Larissa").cpf("16558100738").dataAgendamento("23/12/2022").servico("corte").build());
     }
 
 
     @Test
-    public void testAgenda(){
+    void testAgenda(){
         List<Agendamento> agenda = agendamentoRepository.findAll();
         assertEquals(5,agenda.size());
 
